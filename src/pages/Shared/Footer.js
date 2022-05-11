@@ -6,7 +6,7 @@ const Footer = () => {
         <div className='px-12'>
             <footer style={{
                 background: `url(${footer})`,
-                backgroundSize: 'cover'
+                backgroundSize: '600px'
             }} class="footer p-10">
                 <div>
                     <span class="footer-title">Services</span>
@@ -31,7 +31,7 @@ const Footer = () => {
             </footer>
             <div>
 
-                <div className='text-center mx-12'>
+                <div className='text-center my-5'>
                     <p>Copyright © 2022 - All right reserved by ACME Industries Ltd</p>
                 </div>
 

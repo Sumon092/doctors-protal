@@ -1,12 +1,17 @@
 import React from 'react';
 import bannerImage from '../../assets/images/chair.png'
-import backgroundImage from '../../assets/images/bg.png'
+// import backgroundImage from '../../assets/images/bg.png'
 import PrimaryButton from '../Shared/PrimaryButton';
+import backgroundImage from '../../assets/images/bg.png'
 
 const Banner = () => {
     return (
 
-        <div class="hero min-h-screen bg-base-100">
+        <div style={{
+            background: `url(${backgroundImage})`,
+            backgroundSize: 'cover'
+        }}
+            className="hero min-h-screen bg-base-100" >
             <div class="hero-content flex-col lg:flex-row-reverse">
                 <img src={bannerImage} class="max-w-sm rounded-lg shadow-2xl" />
                 <div>
@@ -16,7 +21,7 @@ const Banner = () => {
                     <PrimaryButton>Get Started</PrimaryButton>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 
