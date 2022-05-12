@@ -13,9 +13,9 @@ const BookingModal = ({ treatment, date }) => {
                     <form className='grid grid-cols-1 justify-items-center gap-5 mt-5'>
                         <input type="text" value={format(date, 'PP')} disabled class="input input-bordered w-full max-w-xs" />
                         <select class="select select-bordered w-full max-w-xs">
-                            <option disabled selected>Who shot first?</option>
-                            <option>Han Solo</option>
-                            <option>Greedo</option>
+                            {
+                                slots.map(slot => <option value={slot}>{slot}</option>)
+                            }
                         </select>
                         <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
                         <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
