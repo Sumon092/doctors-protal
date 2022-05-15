@@ -7,6 +7,8 @@ import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
 import RequiredAuth from './pages/Login/RequiredAuth/RequiredAuth';
 import SignUp from './pages/Login/SignUp';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import Navbar from './pages/Shared/Navbar';
 
@@ -28,6 +30,7 @@ const App = () => {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp />}></Route>
       </Routes>
+      <ToastContainer></ToastContainer>
     </div>
   );
 };
