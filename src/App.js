@@ -14,6 +14,7 @@ import Navbar from './pages/Shared/Navbar';
 import Dashboard from './pages/DashBoard/Dashboard';
 import MyAppointment from './pages/DashBoard/MyAppointment';
 import MyReview from './pages/DashBoard/MyReview';
+import Users from './pages/DashBoard/Users';
 
 
 const App = () => {
@@ -34,6 +35,7 @@ const App = () => {
         <Route path="dashboard" element={<RequiredAuth><Dashboard /></RequiredAuth>} >
           <Route index element={<MyAppointment></MyAppointment>}></Route>
           <Route path="review" element={<MyReview></MyReview>}></Route>
+          <Route path="users" element={<Users></Users>}></Route>
           {/* <Route path="history" element={<MyHistory></MyHistory>}></Route> */}
         </Route>
         {/* <Route path='/dashboard' element={
