@@ -11,7 +11,7 @@ const MyAppointment = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/booking?${user.email}`, {
+        fetch(`http://localhost:5000/booking?patient=${user.email}`, {
             method: 'GET',
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -33,8 +33,8 @@ const MyAppointment = () => {
         <div>
             <h3>My appointment {appointments.length}</h3>
 
-            <div class="overflow-x-auto">
-                <table class="table table-zebra w-full">
+            <div className="overflow-x-auto">
+                <table className="table table-zebra w-full">
                     {/* <!-- head --> */}
                     <thead>
                         <tr>
