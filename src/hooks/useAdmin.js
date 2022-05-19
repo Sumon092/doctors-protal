@@ -8,7 +8,7 @@ const useAdmin = (user) => {
         console.log({ email });
         if (email) {
             console.log('inside user admin');
-            fetch(`http://localhost:5000/admin/${email}`, {
+            fetch(`https://peaceful-headland-62606.herokuapp.com/admin/${email}`, {
                 method: 'GET',
                 headers: {
                     'content-type': `Bearer ${localStorage.getItem('accessToken')}`
@@ -16,7 +16,7 @@ const useAdmin = (user) => {
             })
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data);
+                    // console.log(data);
                     setAdmin(data.admin);
                     setAdminLoading(false);
                 })
