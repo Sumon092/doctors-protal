@@ -15,6 +15,7 @@ import Dashboard from './pages/DashBoard/Dashboard';
 import MyAppointment from './pages/DashBoard/MyAppointment';
 import MyReview from './pages/DashBoard/MyReview';
 import Users from './pages/DashBoard/Users';
+import RequireAdmin from './pages/Login/RequiredAuth/RequireAdmin';
 
 
 const App = () => {
@@ -35,8 +36,8 @@ const App = () => {
         <Route path="dashboard" element={<RequiredAuth><Dashboard /></RequiredAuth>} >
           <Route index element={<MyAppointment></MyAppointment>}></Route>
           <Route path="review" element={<MyReview></MyReview>}></Route>
-          <Route path="users" element={<Users></Users>}></Route>
-          {/* <Route path="history" element={<MyHistory></MyHistory>}></Route> */}
+          <Route path="users" element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
+
         </Route>
         {/* <Route path='/dashboard' element={
           <RequiredAuth>
