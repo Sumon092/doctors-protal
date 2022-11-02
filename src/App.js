@@ -17,6 +17,7 @@ import MyReview from './pages/DashBoard/MyReview';
 import Users from './pages/DashBoard/Users';
 import RequireAdmin from './pages/Login/RequiredAuth/RequireAdmin';
 import AddDoctor from './pages/DashBoard/AddDoctor';
+import ManageDoctor from './pages/DashBoard/ManageDoctor';
 
 
 const App = () => {
@@ -39,6 +40,7 @@ const App = () => {
           <Route path="review" element={<MyReview></MyReview>}></Route>
           <Route path="users" element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
           <Route path="addDoctor" element={<RequireAdmin><AddDoctor></AddDoctor></RequireAdmin>}></Route>
+          <Route path="manageDoctor" element={<RequireAdmin><ManageDoctor></ManageDoctor></RequireAdmin>}></Route>
 
         </Route>
         {/* <Route path='/dashboard' element={

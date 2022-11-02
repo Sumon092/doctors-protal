@@ -34,7 +34,7 @@ const MyAppointment = () => {
             <h3>My appointment {appointments.length}</h3>
 
             <div className="overflow-x-auto">
-                <table className="table table-zebra w-full">
+                <table className="table table-zebra">
                     {/* <!-- head --> */}
                     <thead>
                         <tr>
